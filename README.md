@@ -1,8 +1,8 @@
 # Async Week Project
 
 ## Technologies
-- Apollo Server
+Ideas:
 - GraphQL
-- Primsa
-- GraphQL Playground
--
+- [Brain.js](https://github.com/BrainJS/brain.js) (Machine Learning / Neural Networks)
+- React-Bootstrap
+- JQuery

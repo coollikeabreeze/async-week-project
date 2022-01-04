@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import css from '../public/style.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -22,7 +21,6 @@ const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache()
 });
-
 
 ReactDOM.render(
   <Router>
