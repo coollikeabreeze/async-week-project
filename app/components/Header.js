@@ -10,22 +10,15 @@ import {
 const Header = () => {
   return (
     <div>
-      <header>
-        <Navbar>
-          <DropdownMenu>
-            <DropdownItem>First Dropdown Item</DropdownItem>
-          </DropdownMenu>
-          <NavLink>Your Posts</NavLink>
+      <header className="navbar-default">
+      <Navbar>
+          <NavLink>Your Post</NavLink>
           <NavLink>Create New Posts</NavLink>
           <NavLink>Logout</NavLink>
         </Navbar>
       </header>
 
       {/* <Route path="/" component={Home}></Route> */}
-
-      <div>
-        Hello, World
-      </div>
 
     </div>
   )

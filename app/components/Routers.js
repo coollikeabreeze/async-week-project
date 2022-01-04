@@ -13,14 +13,14 @@ import {
 const Routers = () => {
   return (
     <div>
-      <Navbar>
-          <DropdownMenu>
-            <DropdownItem>First Dropdown Item</DropdownItem>
-          </DropdownMenu>
-          <NavLink>Your Posts</NavLink>
+
+      <header>
+      <Navbar className="navbar-default">
+          <NavLink>Your Post</NavLink>
           <NavLink>Create New Posts</NavLink>
           <NavLink>Logout</NavLink>
         </Navbar>
+      </header>
       <Routes>
       <Route exact path="/" element={<Home/>}/>
       </Routes>

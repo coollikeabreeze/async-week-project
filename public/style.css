@@ -1,0 +1,41 @@
+* {
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: url("https://wallpaperaccess.com/full/42337.jpg");
+  background-size: 200vh;
+  background-position: top center;
+}
+
+.navbar {
+  color: black;
+  background-color: rgb(2, 2, 52);
+}
+
+.navitem {
+  color:white;
+}
+
+.dropdown {
+  /* background: rgb(225, 40, 163); */
+  border-style: 5px solid;
+  border-color: black;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.dropdown.button:focus:not(:focus-visible) {
+  background: white;
+}
+
+Table {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.table-header{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: rgb(225, 40, 163);
+  font-weight: 700;
+}
