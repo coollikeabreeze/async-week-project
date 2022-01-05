@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Route, Link } from "react-router-dom";
 
 import {
@@ -8,7 +9,7 @@ import {
   NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Table, ButtonDropdown, dropdownOpen, toggleDropdown
 } from "reactstrap";
 
-export default class Home extends React.Component {
+export class Home extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,16 +28,7 @@ export default class Home extends React.Component {
   render() {
       return (
     <div>
-        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-          <DropdownToggle caret>Action</DropdownToggle>
-          <DropdownMenu className="dropdown">
-            <DropdownItem>Action</DropdownItem>
-            <DropdownItem>Another Action</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>Another Action</DropdownItem>
-          </DropdownMenu>
-          </Dropdown>
-      <Table>
+      {/* <Table>
         <thead className="table-header">
           <tr>
             <th>DATE</th>
@@ -48,7 +40,10 @@ export default class Home extends React.Component {
 
           </tr>
         </tbody>
-      </Table>
+      </Table> */}
     </div>
     )}
-};
+}
+
+
+export default connect(null, null)(Home);

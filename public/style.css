@@ -22,7 +22,6 @@ body {
   border-style: 5px solid;
   border-color: black;
   margin-left: 20px;
-  margin-top: 20px;
 }
 
 .dropdown.button:focus:not(:focus-visible) {

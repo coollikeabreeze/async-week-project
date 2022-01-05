@@ -17,15 +17,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //api
-//app.use('/api', require('./api'))
+app.use('/api', require('./api'))
 
 //for requests that don't match api routes
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../public'));
 });
 
-const PORT = process.env.PORT || 8080
-app.listen(PORT, () => console.log(`serving up preposterously on port ${PORT}`))
+// const PORT = process.env.PORT || 8080
+// app.listen(PORT, () => console.log(`serving up preposterously on port ${PORT}`))
 
 
 app.use(function (err, req, res) {

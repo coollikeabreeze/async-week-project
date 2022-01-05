@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 
-const dbName = "boilermaker";
+const dbName = "async-week-project";
 
 //If you are using Heroku as a deployment service and Heroku Postgres as your database, remember that the database url in your Heroku environment will be available in an environment variable DATABASE_URL. Prepare your sequelize instance to take advantage of this, and only use your local database url if no DATABASE_URL is available.
 

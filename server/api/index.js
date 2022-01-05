@@ -1,8 +1,7 @@
 const router = require("express").Router();
 
 // Your routes go here!
-router.use('/myRouter', require('./myRouter'))
-
+router.use('/user', require('./user'))
 
 router.use((req, res, next) => {
   const err = new Error("Page not found!");

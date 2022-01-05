@@ -3,30 +3,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import css from '../public/style.css'
 import { BrowserRouter as Router } from 'react-router-dom'
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
 
+import store from './store'
 import Routers from './components/Routers'
-
-import {
-  ApolloProvider,
-  ApolloClient,
-  createHttpLink,
-  InMemoryCache
-} from '@apollo/client';
-
-const httpLink = createHttpLink({
-  uri: 'http://localhost:4000'
-});
-
-const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache()
-});
 
 ReactDOM.render(
   <Router>
-  <ApolloProvider client={client}>
-    <Routers />
-  </ApolloProvider>
+    <Provider store={store}>
+      <Routers />
+    </Provider>
   </Router>,
-  document.getElementById('app')
-);
+  document.getElementById('main')
+)
