@@ -4,6 +4,7 @@ import { Route, Routes, Link } from "react-router-dom";
 
 import Header from "./Header"
 import Home from "./Home"
+import Users from "./Users"
 
 import {
   Collapse, Container, Row, Col, Form, Input, Button, Navbar, Nav, NavbarToggler, NavbarText,
@@ -30,44 +31,9 @@ export class Routers extends React.Component {
   render() {
   return (
     <div>
-      <header>
-        <Navbar dark expand="sm">
-          <NavbarBrand href="/"> ASYNC WEEK </NavbarBrand>
-          <NavbarToggler onClick={function noRefCheck(){}} />
-
-          <Collapse navbar>
-            <Nav className="me-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap"> GitHub</NavLink>
-              </NavItem>
-
-              <UncontrolledDropdown inNavbar nav>
-                <DropdownToggle caret nav>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu end>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </header>
-
       <Routes>
         <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/users" element={<Users/>}/>
       </Routes>
     </div>
   )

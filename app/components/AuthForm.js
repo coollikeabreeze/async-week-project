@@ -2,6 +2,8 @@ import React from "react";
 import {connect} from 'react-redux'
 import { Route, Link } from "react-router-dom";
 
+import { authenticate } from '../redux/auth'
+
 import {
   Container, Row, Col, Form,
   Input, Button,
@@ -9,7 +11,7 @@ import {
   NavLink, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Table, ButtonDropdown, dropdownOpen, toggleDropdown
 } from "reactstrap";
 
-const Authentication = props => {
+const AuthForm = props => {
   const {name, displayName, handleSubmit, error} = props
 
   return (
@@ -64,5 +66,5 @@ const mapDispatch = dispatch => {
   }
 }
 
-export const Login = connect(mapLogin, mapDispatch)(Authentication)
-export const Signup = connect(mapSignup, mapDispatch)(Authentication)
+export const Login = connect(mapLogin, mapDispatch)(AuthForm)
+export const Signup = connect(mapSignup, mapDispatch)(AuthForm)

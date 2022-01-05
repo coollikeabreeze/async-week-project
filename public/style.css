@@ -31,6 +31,8 @@ body {
 Table {
   margin-top: 20px;
   margin-left: 20px;
+  opacity: .8;
+  background-color: pink
 }
 
 .table-header{

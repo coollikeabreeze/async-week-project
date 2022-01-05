@@ -1,9 +1,10 @@
+import axios from "axios";
+
 const TOKEN = 'token'
 
 const SET_AUTH = 'SET_AUTH'
 
 const setAuth = auth => ({type: SET_AUTH, auth})
-import axios from "axios";
 
 export const me = () => async dispatch => {
   const token = window.localStorage.getItem(TOKEN)

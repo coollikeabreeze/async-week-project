@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { connect } from "react-redux";
 import { Route, Link } from "react-router-dom";
@@ -13,34 +15,12 @@ export class Home extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
-  }
-
-  toggle() {
-    this.setState(prevState => ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
   }
 
   render() {
       return (
     <div>
-      {/* <Table>
-        <thead className="table-header">
-          <tr>
-            <th>DATE</th>
-            <th>TITLE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
 
-          </tr>
-        </tbody>
-      </Table> */}
     </div>
     )}
 }
