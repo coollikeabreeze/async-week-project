@@ -32,7 +32,7 @@ export class Headers extends React.Component {
   return (
     <div>
       <header>
-        <Navbar dark expand="sm">
+        <Navbar dark expand="sm" fixed ="top">
           <NavbarBrand href="/"> ASYNC WEEK PROJECT</NavbarBrand>
           <NavbarToggler onClick={function noRefCheck(){}} />
 

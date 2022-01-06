@@ -47,7 +47,9 @@ export class Home extends React.Component {
                 See an example of a table with user data implemented with Reactstrap.
               </CardText>
               <Button>
-                Go to Users
+                <Link to='/users'>
+                  Go to Users
+                </Link>
               </Button>
             </Card>
           </Col>
@@ -60,7 +62,9 @@ export class Home extends React.Component {
                 See an example of a Chart.js implementation of the user data.
               </CardText>
               <Button>
-                Go to Analytics
+                <Link to='/analytics'>
+                  Go to Analytics
+                </Link>
               </Button>
             </Card>
           </Col>

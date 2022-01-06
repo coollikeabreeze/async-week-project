@@ -71,27 +71,19 @@ export class Analytics extends React.Component {
       };
 
       agesArr.forEach((age) => {
-        switch (age) {
-          case age >= 88:
-            agesObj["88-100"] += 1;
-            break;
-          case age >= 70:
-            agesObj["70-87"] += 1;
-            break;
-          case age >= 51:
-            agesObj["51-69"] += 1;
-            break;
-          case age >= 35:
-            agesObj["35-50"] += 1;
-            break;
-          case age >= 18:
-            agesObj["18-34"] += 1;
-            break;
-          case age >= 0:
-            agesObj["0-17"] += 1;
-            break;
+        if (age >= 88)
+          agesObj["88-100"] += 1;
+        else if (age >= 70)
+          agesObj["70-87"] += 1;
+        else if (age >= 51)
+          agesObj["51-69"] += 1;
+        else if (age >= 35)
+          agesObj["35-50"] += 1;
+        else if (age >= 18)
+          agesObj["18-34"] += 1;
+        else if (age >= 0)
+          agesObj["0-17"] += 1;
         }
-      }
     )
     return agesObj;
   }
@@ -171,11 +163,11 @@ export class Analytics extends React.Component {
                 options={{
                   title:{
                     display:true,
-                    text:'Average Rainfall per month',
+                    text:'User age by bracket',
                     fontSize:20
                   },
                   legend:{
-                    display:true,
+                    display:false,
                     position:'right'
                   }
                 }}
@@ -183,23 +175,6 @@ export class Analytics extends React.Component {
             </Card>
           </Col>
         </Row>
-
-          {/* <Col>
-            <Line
-            data={state}
-            options={{
-              title:{
-                display:true,
-                text:'Average Rainfall per month',
-                fontSize:20
-              },
-              legend:{
-                display:true,
-                position:'right'
-              }
-            }}
-            />
-            </Col> */}
           </div>
       </div>
 
