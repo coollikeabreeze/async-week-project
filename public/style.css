@@ -54,13 +54,17 @@ Table {
 .large-card {
   background-color: rgb(2, 2, 52);
   color: white;
+  margin-top: 35px;
+  margin-bottom: 150px;
+  /* border: 1px solid white; */
 }
 
 .small-card {
   background-color: rgb(2, 2, 52);
   color: white;
-  max-width: 300px;
-  /* border: 1px solid rgb(225, 40, 163); */
+  /* max-width: 300px; */
+  /* border: 1px solid white; */
+  justify-content: left
 }
 
 h2 {
@@ -87,8 +91,6 @@ a {
 }
 
 #smaller-cards {
-  margin-top: 200px;
-  justify-content: center;
 }
 
 #new-user-button {
