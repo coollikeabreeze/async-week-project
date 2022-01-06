@@ -11,6 +11,14 @@ router.get('/', async(req, res, next) => {
 }
 )
 
+router.post('/add', async(req, res, next) =>{
+  try {
+    res.status(201).send(await User.create(req.body));
+  } catch (error) {
+    next(error)
+  }
+})
+
 // router.post('/login', async (req, res, next) => {
 //   try {
 //     res.send({ token: await User.authenticate(req.body)});

@@ -13,7 +13,7 @@ const seed = async () => {
       email: "tlasso@here.com",
       username: "TLasso",
       age: 45,
-      country: "United States"
+      country: "United States of America"
       }
     )
 
@@ -23,7 +23,7 @@ const seed = async () => {
       email: "kjones@here.com",
       username: "KJones",
       age: 31,
-      country: "United Kingdom"
+      country: "United Kingdom of Great Britain and Northern Ireland"
       }
     )
 
@@ -34,6 +34,46 @@ const seed = async () => {
       username: "SObisanya",
       age: 25,
       country: "Nigeria"
+      }
+    )
+
+    const user4 = await User.create({
+      firstName: "Hans",
+      lastName: "Gruber",
+      email: "HGruber@here.com",
+      username: "HGruber",
+      age: 42,
+      country: "Germany"
+      }
+    )
+
+    const user5 = await User.create({
+      firstName: "Joseph",
+      lastName: "Takagi",
+      email: "JTakagi@here.com",
+      username: "JTakagi",
+      age: 47,
+      country: "Japan"
+      }
+    )
+
+    const user6 = await User.create({
+      firstName: "Logan",
+      lastName: "Roy",
+      email: "LRoy@here.com",
+      username: "LRoy",
+      age: 72,
+      country: "United Kingdom of Great Britain and Northern Ireland"
+      }
+    )
+
+    const user7 = await User.create({
+      firstName: "Siobhan",
+      lastName: "Roy",
+      email: "SRoy@here.com",
+      username: "SRoy",
+      age: 39,
+      country: "United States of America"
       }
     )
 

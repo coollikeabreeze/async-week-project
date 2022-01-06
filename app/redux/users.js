@@ -43,9 +43,9 @@ export const addUser = (user, history) =>
 {
   return async (dispatch) => {
     try {
-      const { data: added } = await axios.post('api/users', user);
+      const { data: added } = await axios.post('api/users/add', user);
       dispatch(_addUser(added));
-      history.push('/users')
+      // history.push('/users')
     } catch (error) {
       console.log(error)
     }

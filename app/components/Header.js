@@ -33,7 +33,7 @@ export class Headers extends React.Component {
     <div>
       <header>
         <Navbar dark expand="sm">
-          <NavbarBrand href="/"> ASYNC WEEK </NavbarBrand>
+          <NavbarBrand href="/"> ASYNC WEEK PROJECT</NavbarBrand>
           <NavbarToggler onClick={function noRefCheck(){}} />
 
           <Collapse navbar>
@@ -46,7 +46,7 @@ export class Headers extends React.Component {
               </NavItem>
 
 
-              <UncontrolledDropdown inNavbar nav>
+              {/* <UncontrolledDropdown inNavbar nav>
                 <DropdownToggle caret nav>
                   Options
                 </DropdownToggle>
@@ -62,7 +62,7 @@ export class Headers extends React.Component {
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </Navbar>

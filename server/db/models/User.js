@@ -21,6 +21,13 @@ const User = db.define('user', {
       notEmpty: true
     }
   },
+  username: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
   email: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -34,13 +41,6 @@ const User = db.define('user', {
     defaultValue: 'https://www.iconbunny.com/icons/media/catalog/product/1/4/147.1-student-icon-iconbunny.jpg',
     validate: {
       isUrl: true
-    }
-  },
-  age: {
-    type: Sequelize.INTEGER,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
     }
   },
   country: {

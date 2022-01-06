@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { fetchUsers } from '../redux/users'
 
 import {
-  Table
+  Table, Button
 } from "reactstrap";
 
 export class Users extends React.Component {
@@ -15,6 +15,12 @@ export class Users extends React.Component {
   render () {
     return (
       <div>
+
+        <div>
+          <Button id='new-user-button' href="users/add">
+            Add New User
+          </Button>
+        </div>
         <Table dark className="user-table">
           <thead>
             <tr>
@@ -31,9 +37,9 @@ export class Users extends React.Component {
 
             {this.props.users.map((user) => {
               return (
-                <tr>
+                <tr key={user.id}>
                   <td>{user.id}</td>
-                  <td>{user.userName}</td>
+                  <td>{user.username}</td>
                   <td>{user.firstName}</td>
                   <td>{user.lastName}</td>
                   <td>{user.email}</td>
@@ -42,7 +48,6 @@ export class Users extends React.Component {
               )
             })}
           </tbody>
-
       </Table>
 
       </div>
