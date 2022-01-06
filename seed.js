@@ -23,7 +23,7 @@ const seed = async () => {
       email: "kjones@here.com",
       username: "KJones",
       age: 31,
-      country: "United Kingdom of Great Britain and Northern Ireland"
+      country: "United Kingdom"
       }
     )
 
@@ -63,7 +63,7 @@ const seed = async () => {
       email: "LRoy@here.com",
       username: "LRoy",
       age: 72,
-      country: "United Kingdom of Great Britain and Northern Ireland"
+      country: "United Kingdom"
       }
     )
 

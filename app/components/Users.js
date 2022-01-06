@@ -28,6 +28,7 @@ export class Users extends React.Component {
               <th>Username</th>
               <th>First Name</th>
               <th>Last Name</th>
+              <th>Age</th>
               <th>Email</th>
               <th>Country</th>
             </tr>
@@ -42,6 +43,7 @@ export class Users extends React.Component {
                   <td>{user.username}</td>
                   <td>{user.firstName}</td>
                   <td>{user.lastName}</td>
+                  <td>{user.age}</td>
                   <td>{user.email}</td>
                   <td>{user.country}</td>
                 </tr>

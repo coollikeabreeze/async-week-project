@@ -121,3 +121,19 @@ form {
   background-color: white;
   padding: 20px
 }
+
+.chart {
+  background-color: rgb(163, 195, 220);
+  margin-left: 20px;
+  opacity: .9;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+/* .chart-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between
+
+} */

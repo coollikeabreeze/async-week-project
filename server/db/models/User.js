@@ -45,6 +45,13 @@ const User = db.define('user', {
   },
   country: {
     type: Sequelize.STRING
+  },
+  age: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
   }
 })
 
