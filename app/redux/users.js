@@ -3,6 +3,8 @@ require("babel-polyfill");
 
 const initialState = [];
 
+import history from '../history'
+
 const SET_USERS= 'SET_USERS'
 const ADD_USER = 'ADD_USER'
 const DELETE_USER = 'DELETE_USER'
@@ -39,13 +41,12 @@ export const fetchUsers = () => {
   }
 };
 
-export const addUser = (user, history) =>
+export const addUser = (user) =>
 {
   return async (dispatch) => {
     try {
-      const { data: added } = await axios.post('api/users/add', user);
+      const { data: added } = await axios.post('api/users', user);
       dispatch(_addUser(added));
-      // history.push('/users')
     } catch (error) {
       console.log(error)
     }

@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import usersReducer, { addUser } from '../redux/users';
 
+//import history from '../history'
+//const history = createBrowserHistory();
+
 import {
   Button, Col, Form, FormGroup, FormText, FormFeedback, Label, Input, Select, Row
 } from "reactstrap";
@@ -297,6 +300,7 @@ export class AddUser extends React.Component {
     if (emails.includes(this.state.email)) {
       alert("This user already exists")
     }
+    console.log(this.state)
     this.props.addUser({ ...this.state });
   }
 

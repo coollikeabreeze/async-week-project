@@ -42,9 +42,8 @@ export class Headers extends React.Component {
                 <NavLink href="/users">Users</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/chartjs/">Chart.js</NavLink>
+                <NavLink href="/analytics">Analytics</NavLink>
               </NavItem>
-
 
               {/* <UncontrolledDropdown inNavbar nav>
                 <DropdownToggle caret nav>
@@ -65,6 +64,10 @@ export class Headers extends React.Component {
               </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
+          <NavbarText>
+              Andrea Khan | ASW
+          </NavbarText>
+
         </Navbar>
       </header>
 

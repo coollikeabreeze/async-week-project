@@ -1,11 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, withRouter } from "react-router-dom";
 
 import Header from "./Header"
 import Home from "./Home"
 import Users from "./Users"
 import AddUser from "./AddUser"
+import Analytics from "./Analytics";
 
 import {
   Collapse, Container, Row, Col, Form, Input, Button, Navbar, Nav, NavbarToggler, NavbarText,
@@ -35,7 +36,8 @@ export class Routers extends React.Component {
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route exact path="/users" element={<Users/>}/>
-        <Route exact path="/users/add" element={<AddUser/>}/>
+        <Route exact path="/add-user" element={<AddUser/>}/>
+        <Route exact path="/analytics" element={<Analytics/>}/>
       </Routes>
     </div>
   )

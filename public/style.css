@@ -30,11 +30,22 @@ body {
   background: white;
 }
 
+#home-images {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-height: 120px;
+  margin: 20px;
+  border-radius: 2px;
+}
+
 Table {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  opacity: .8;
+  opacity: .9;
 }
 
 .table-header{
@@ -55,8 +66,14 @@ Table {
   background-color: rgb(2, 2, 52);
   color: white;
   margin-top: 35px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   /* border: 1px solid white; */
+  opacity: .8;
+}
+
+#smaller-cards {
+  display: flex;
+  justify-content: center;
 }
 
 .small-card {
@@ -64,7 +81,8 @@ Table {
   color: white;
   /* max-width: 300px; */
   /* border: 1px solid white; */
-  justify-content: left
+  max-width: 350px;
+  opacity: .9
 }
 
 h2 {
@@ -88,9 +106,6 @@ button {
 
 a {
   color: white;
-}
-
-#smaller-cards {
 }
 
 #new-user-button {

@@ -17,7 +17,7 @@ export class Users extends React.Component {
       <div>
 
         <div>
-          <Button id='new-user-button' href="users/add">
+          <Button id='new-user-button' href="/add-user">
             Add New User
           </Button>
         </div>
