@@ -77,6 +77,116 @@ const seed = async () => {
       }
     )
 
+    const user8 = await User.create({
+      firstName: "Roman",
+      lastName: "Roy",
+      email: "RRoy@here.com",
+      username: "RRoy",
+      age: 33,
+      country: "United States of America"
+      }
+    )
+
+    const user9 = await User.create({
+      firstName: "Kath",
+      lastName: "Day-Knight",
+      email: "KDay-Night@here.com",
+      username: "KDay-Knight",
+      age: 43,
+      country: "Australia"
+      }
+    )
+
+    const user10 = await User.create({
+      firstName: "Kim",
+      lastName: "Craig",
+      email: "KCraig@here.com",
+      username: "KCraig",
+      age: 25,
+      country: "Australia"
+      }
+    )
+
+    const user11 = await User.create({
+      firstName: "Kurt",
+      lastName: "Wallander",
+      email: "KWallander@here.com",
+      username: "KWallander",
+      age: 51,
+      country: "Sweden"
+      }
+    )
+
+    const user12 = await User.create({
+      firstName: "Uli",
+      lastName: "Kunkel",
+      email: "UKunkel@here.com",
+      username: "UKunkel",
+      age: 47,
+      country: "Sweden"
+      }
+    )
+
+    const user13 = await User.create({
+      firstName: "Uli",
+      lastName: "Kunkel",
+      email: "UKunkel@here.com",
+      username: "UKunkel",
+      age: 47,
+      country: "Sweden"
+      }
+    )
+
+    const user14 = await User.create({
+      firstName: "Jamal",
+      lastName: "Malik",
+      email: "JMalik@here.com",
+      username: "JMalik",
+      age: 19,
+      country: "India"
+      }
+    )
+
+    const user15 = await User.create({
+      firstName: "Nick",
+      lastName: "Young",
+      email: "NYoung@here.com",
+      username: "NYoung",
+      age: 19,
+      country: "Singapore"
+      }
+    )
+
+    const user16 = await User.create({
+      firstName: "Amelie",
+      lastName: "Poulain",
+      email: "APoulain@here.com",
+      username: "APoulain",
+      age: 24,
+      country: "France"
+      }
+    )
+
+    const user17 = await User.create({
+      firstName: "Rodion",
+      lastName: "Raskolnikov",
+      email: "RRaskilnikov@here.com",
+      username: "RRaskilnikov",
+      age: 22,
+      country: "Russia"
+      }
+    )
+
+    const user18 = await User.create({
+      firstName: "Gregor",
+      lastName: "Samsa",
+      email: "GSamsa@here.com",
+      username: "GSamsa",
+      age: 23,
+      country: "Czech Republic"
+      }
+    )
+
     // const student1 = await Student.create({firstName: 'Richard',
     // lastName: "Hendricks",
     // email: "rhendricks@mhacademy.edu",

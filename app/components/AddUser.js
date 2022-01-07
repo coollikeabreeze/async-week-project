@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import usersReducer, { addUser } from '../redux/users';
 
-//import history from '../history'
+import history from '../history'
 //const history = createBrowserHistory();
 
 import {
-  Button, Col, Form, FormGroup, FormText, FormFeedback, Label, Input, Select, Row
+  Breadcrumb, BreadcrumbItem, Button, Col, Form, FormGroup, FormText, FormFeedback, Label, Input, Select, Row
 } from "reactstrap";
 
 const countries = [
@@ -69,7 +69,7 @@ const countries = [
   "Cuba",
   "Curaçao",
   "Cyprus",
-  "Czechia",
+  "Czech Republic",
   "Côte d'Ivoire",
   "Denmark",
   "Djibouti",
@@ -310,14 +310,37 @@ export class AddUser extends React.Component {
     if (emails.includes(this.state.email)) {
       alert("This user already exists")
     }
-    console.log(this.state)
     this.props.addUser({ ...this.state });
+    location.reload(history.push('/users'))
   }
 
   render() {
-    return (
-      <Form onSubmit={this.handleSubmit}>
 
+    return (
+      <div>
+        <div>
+          <Breadcrumb listTag="div">
+            <BreadcrumbItem>
+              <Link to="/">
+                Home
+              </Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem>
+              <Link to="/users">
+                Users
+              </Link>
+            </BreadcrumbItem>
+            <BreadcrumbItem
+              active
+              tag="span"
+            >
+              Add User
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+
+      <Form onSubmit={this.handleSubmit}>
+        <h2 id='form-title'>Add New User</h2>
         <FormGroup row>
           <Label
             sm={2}
@@ -361,7 +384,7 @@ export class AddUser extends React.Component {
               name="age"
               type="select"
               onChange={this.handleChange}>
-
+              <option></option>
               {ages.map((age, idx) => {
                 return (
                   <option key={idx} value={age}>
@@ -417,7 +440,7 @@ export class AddUser extends React.Component {
               name="country"
               type="select"
               onChange={this.handleChange}>
-
+              <option></option>
               {countries.map((country, idx) => {
                 return (
                   <option key={idx} value={country}>
@@ -433,6 +456,7 @@ export class AddUser extends React.Component {
               Submit
             </Button>
         </Form>
+      </div>
     )
   }
 }

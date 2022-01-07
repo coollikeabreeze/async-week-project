@@ -23,7 +23,7 @@ export class Home extends React.Component {
             Async Week Project
           </CardTitle>
             <CardText className="text-center">
-              TThe async week project practices Reactstrap and Chart.js. Click through to the <a href='/users'>Users</a> or <a href='/analytics'>Analytics</a> to see more examples.
+              This async week project practices Reactstrap and Chart.js. Click through to the <a href='/users'>Users</a> or <a href='/analytics'>Analytics</a> to see more examples.
            </CardText>
            <div id='home-images'>
            <a href="https://reactstrap.github.io/?path=/story/home-installation--page">
@@ -41,14 +41,14 @@ export class Home extends React.Component {
           <Col sm="6">
             <Card body className="small-card">
               <CardTitle tag="h4">
-                Users
+                All Users
               </CardTitle>
               <CardText>
                 See an example of a table with user data implemented with Reactstrap.
               </CardText>
               <Button>
                 <Link to='/users'>
-                  Go to Users
+                  Go to All Users
                 </Link>
               </Button>
             </Card>
@@ -56,14 +56,14 @@ export class Home extends React.Component {
           <Col sm="6">
             <Card body className="small-card">
               <CardTitle tag="h4">
-                Analytics
+                User Analytics
               </CardTitle>
               <CardText>
                 See an example of a Chart.js implementation of the user data.
               </CardText>
               <Button>
                 <Link to='/analytics'>
-                  Go to Analytics
+                  Go to User Analytics
                 </Link>
               </Button>
             </Card>

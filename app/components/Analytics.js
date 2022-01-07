@@ -3,10 +3,11 @@ import { connect } from "react-redux";
 import {Line, Bar, Pie} from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart }            from 'react-chartjs-2'
+import { Link } from 'react-router-dom'
 
 import { fetchUsers } from '../redux/users'
 
-import { Row, Col, Card, CardBody, CardText, CardTitle, CardSubtitle, Button, Image } from "reactstrap"
+import { Breadcrumb, BreadcrumbItem, Row, Col, Card, CardBody, CardText, CardTitle, CardSubtitle, Button, Image } from "reactstrap"
 
 
 // const state = {
@@ -99,7 +100,7 @@ export class Analytics extends React.Component {
           label: '# Users',
           fill: false,
           lineTension: 1,
-          backgroundColor: ['rgb(255,173,0)', 'rgb(225, 40, 163)', 'rgb(109, 241, 216)', 'rgb(73,14,97', 'rgb(21, 108, 219)', 'rgb(0,0,139)', 'rgb(124, 82, 168)', 'rgb(1, 234, 169)'],
+          backgroundColor: ['rgb(255,173,0)', 'rgb(225, 40, 163)', 'rgb(109, 241, 216)', 'rgb(57,255,20)', 'rgb(73,14,97', 'rgb(21, 108, 219)','rgb(0,0,139)', 'rgb(124, 82, 168)', 'rgb(1, 234, 169)', 'rgb(204, 102, 0)', 'rgb(255, 153, 204)', 'rgb(15,84,65)'],
           borderColor: 'rgba(0,0,0,1)',
           borderWidth: 2,
           data: Object.values(userCountries)
@@ -111,7 +112,7 @@ export class Analytics extends React.Component {
       labels: Object.keys(userAges),
       datasets: [
         {
-          label: '# Users',
+          label: 'Users',
           fill: false,
           lineTension: 1,
           backgroundColor: ['rgb(255,173,0)', 'rgb(225, 40, 163)', 'rgb(109, 241, 216)', 'rgb(73,14,97', 'rgb(21, 108, 219)', 'rgb(0,0,139)', 'rgb(124, 82, 168)', 'rgb(1, 234, 169)'],
@@ -124,12 +125,28 @@ export class Analytics extends React.Component {
 
     return (
       <div>
+        <div>
+          <Breadcrumb listTag="div">
+            <BreadcrumbItem>
+              <Link to="/">
+                Home
+              </Link>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem
+              active
+              tag="span"
+            >
+              Analytics
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
 
         <div className="chart-box">
         <Row>
         <Col>
-          <Card body>
-            <CardTitle tag="h2">
+          <Card body className='chartcard'>
+            <CardTitle tag="h2" className="chart-title">
               User Countries
             </CardTitle>
               <CardText className="text-center">
@@ -145,15 +162,26 @@ export class Analytics extends React.Component {
                   legend:{
                     display:true,
                     position:'right'
-                  }
+                  },
+                  plugins: {
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 12,
+                                family: "'Poppins', sans-serif"
+                            },
+                        }
+                    },
+
+                },
                 }}
                 />
             </Card>
           </Col>
 
           <Col>
-          <Card body>
-            <CardTitle tag="h2">
+          <Card body className='chartcard'>
+            <CardTitle tag="h2" className="chart-title">
               User Age
             </CardTitle>
               <CardText className="text-center">
@@ -162,15 +190,16 @@ export class Analytics extends React.Component {
                 data={ages}
                 options={{
                   title:{
-                    display:true,
+                    display:false,
                     text:'User age by bracket',
                     fontSize:20
                   },
                   legend:{
                     display:false,
                     position:'right'
+                  },
                   }
-                }}
+                }
                 />
             </Card>
           </Col>

@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
+import {Link} from 'react-router-dom'
 
 import { fetchUsers } from '../redux/users'
 
 import {
-  Table, Button
+  Breadcrumb, BreadcrumbItem, Table, Button
 } from "reactstrap";
 
 export class Users extends React.Component {
@@ -15,6 +16,22 @@ export class Users extends React.Component {
   render () {
     return (
       <div>
+        <div>
+          <Breadcrumb listTag="div">
+            <BreadcrumbItem>
+              <Link to="/">
+                Home
+              </Link>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem
+              active
+              tag="span"
+            >
+              Users
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </div>
 
         <div>
           <Button id='new-user-button' href="/add-user">

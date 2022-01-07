@@ -32,49 +32,28 @@ export class Headers extends React.Component {
   return (
     <div>
       <header>
+
         <Navbar dark expand="sm" fixed ="top">
           <NavbarBrand href="/"> ASYNC WEEK PROJECT</NavbarBrand>
           <NavbarToggler onClick={function noRefCheck(){}} />
-
           <Collapse navbar>
             <Nav className="me-auto" navbar>
-            <NavItem>
-                <NavLink href="/users">Users</NavLink>
+              <NavItem>
+                <NavLink href="/users">All Users</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/analytics">Analytics</NavLink>
+                <NavLink href="/add-user">Add User</NavLink>
               </NavItem>
-
-              {/* <UncontrolledDropdown inNavbar nav>
-                <DropdownToggle caret nav>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu end>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown> */}
+              <NavItem>
+                <NavLink href="/analytics">User Analytics</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
           <NavbarText>
               Andrea Khan | ASW
           </NavbarText>
-
         </Navbar>
       </header>
-
-      {/* <Routes>
-        <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/users" element={<Users/>}/>
-      </Routes> */}
     </div>
   )
 }
