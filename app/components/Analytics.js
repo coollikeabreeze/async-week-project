@@ -9,23 +9,6 @@ import { fetchUsers } from '../redux/users'
 
 import { Breadcrumb, BreadcrumbItem, Row, Col, Card, CardBody, CardText, CardTitle, CardSubtitle, Button, Image } from "reactstrap"
 
-
-// const state = {
-//   labels: ['January', 'February', 'March',
-//            'April', 'May'],
-//   datasets: [
-//     {
-//       label: 'Rainfall',
-//       fill: false,
-//       lineTension: 0.5,
-//       backgroundColor: 'rgba(75,192,192,1)',
-//       borderColor: 'rgba(0,0,0,1)',
-//       borderWidth: 2,
-//       data: [65, 59, 80, 81, 56]
-//     }
-//   ]
-// }
-
 export class Analytics extends React.Component {
 
   componentDidMount() {
@@ -47,6 +30,19 @@ export class Analytics extends React.Component {
       })
       return countriesObj;
     }
+
+    // function getAges () {
+    //   let agesObj = {};
+    //   agesArr.forEach(age => {
+    //     if (Object.keys(agesObj).includes(age)) {
+    //       agesObj[age] += 1;
+    //     } else {
+    //       agesObj[age] = 1;
+    //     }
+    //   })
+    //   console.log(agesObj)
+    //   return agesObj;
+    // }
 
     function getAges () {
       let agesObj = {
