@@ -48,19 +48,6 @@ export class Analytics extends React.Component {
       return countriesObj;
     }
 
-    // function getAges () {
-    //   let agesObj = {};
-    //   agesArr.forEach(age => {
-    //     if (Object.keys(agesObj).includes(age)) {
-    //       agesObj[age] += 1;
-    //     } else {
-    //       agesObj[age] = 1;
-    //     }
-    //   })
-    //   console.log(agesObj)
-    //   return agesObj;
-    // }
-
     function getAges () {
       let agesObj = {
         "0-17": 0,
